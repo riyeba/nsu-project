@@ -58,4 +58,6 @@ def info_detail(request,id,format=None):
         info.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
    
-
+@api_view(['GET', 'PUT','DELETE'])
+def index(request):
+    return HttpResponse("You're looking at question %s." )

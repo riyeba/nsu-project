@@ -28,11 +28,11 @@ from django.urls import include, re_path
 
 
 urlpatterns = [
-    
+    path("", views.index),
     path('admin/', admin.site.urls),
     path('info/', (views.info_list)),
     path('info/<int:id>', (views.info_detail)),
-     re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+    re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
     
    
 ]
